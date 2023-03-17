@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+section > div {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
