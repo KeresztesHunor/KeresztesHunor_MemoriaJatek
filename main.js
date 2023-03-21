@@ -89,6 +89,18 @@ function osszeallit()
     return txt;
 }
 
+function shuffle(lista)
+{
+    for (let i = lista.length - 1; i >= 0; i--)
+    {
+        const RANDOM_INDEX = Math.random() * (i + 1);
+        const IDEIGLENES = lista[i];
+        lista[i] = lista[RANDOM_INDEX];
+        lista[RANDOM_INDEX] = IDEIGLENES;
+    }
+    //return lista; //Ki lehet szedni mert a listák objektumok és ezért referencia alapúak
+}
+
 function kepetIr(kep, alt, parameterek = null)
 {
     return `<img src="${kep}" alt="${alt}"${parameterezes(parameterek)}>`;
